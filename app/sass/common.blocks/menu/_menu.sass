@@ -1,0 +1,23 @@
+.menu
+  display: table
+  width: 100%
+  height: $z
+  margin-top: ($y - ($layout-br-size * 2)) - $z
+  border-collapse: collapse
+  &__item
+    display: table-cell
+    color: #000
+    vertical-align: middle
+    text-align: center
+    border: $layout-br-size solid $layout-br-cl
+    border-bottom: none
+    text-decoration: none
+    overflow: hidden
+    @include transition-duration(.3s)
+    &:hover
+      color: #bac9d8
+      background-color: $layout-bg-cl / 1.2
+    &:first-child
+      border-left: none
+    &:last-child
+      border-right: none

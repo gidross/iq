@@ -1,18 +1,61 @@
-@import vars
+@mixin cell
+  height: 100%
+  display: table-cell
+  text-align: center
+  vertical-align: middle
 
-@media (max-width: $screen-xxs-max)
-  @include responsive-invisibility('.hidden-xxs')
 
-@media (max-width: $screen-xxs-min)
-  @include make-grid(xxs)
+// body
+html, body
+  width: 100%
+  height: 100%
+  color: #000
+  font-family: Verdana, Geneva, sans-serif
+  background-color: $body-bg-cl
 
-@media (max-width: $screen-xxs-max)
-  .visible-xxs
-    display: block
+// frame
+.frame
+  min-width: 980px
+  max-width: 1280px
+  height: 100%
+  margin: 0 auto
+  padding-top: $y
 
-@media (min-width: $screen-xxs)
-  .visible-xxs
-    display: none
+// header
+.header
+  height: $y
+  padding-left: $w
+  padding-right: $v
+  margin-top: -$y
+  position: relative
+  background-color: $layout-bg-cl
+  border: $layout-br-size solid $layout-br-cl
 
+// container
 .container
-  padding-top: 15px
+  height: 100%
+  width: 100%
+  padding-bottom: $x
+  display: table
+  background-color: $layout-bg-cl
+  border-left: $layout-br-size solid $layout-br-cl
+  border-right: $layout-br-size solid $layout-br-cl
+
+// sidebar
+.sidebar
+  width: $w
+  @include cell
+  border-right: $layout-br-size solid $layout-br-cl
+
+// content
+.main
+  @include cell
+
+// footer
+.footer
+  clear: both
+  height: $x
+  margin-top: -$x
+  line-height: $x
+  border: $layout-br-size solid $layout-br-cl
+  text-align: center
