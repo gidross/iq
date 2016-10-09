@@ -1,4 +1,4 @@
-# RG TZ
+# IQ TZ
 
 # Prerequirements:
 * nodejs/npm (https://nodejs.org/)
