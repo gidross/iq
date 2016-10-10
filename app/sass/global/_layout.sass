@@ -38,8 +38,8 @@ html, body
   padding-bottom: $x
   display: table
   background-color: $layout-bg-cl
-  border-left: $layout-br-size solid $layout-br-cl
-  border-right: $layout-br-size solid $layout-br-cl
+  border: $layout-br-size solid $layout-br-cl
+  border-top: none
 
 // sidebar
 .sidebar
@@ -55,7 +55,8 @@ html, body
 .footer
   clear: both
   height: $x
-  margin-top: -$x
+  margin-top: -($x + 2)
   line-height: $x
   border: $layout-br-size solid $layout-br-cl
+  border-bottom: none
   text-align: center
